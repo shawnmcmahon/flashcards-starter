@@ -1,0 +1,77 @@
+const chai = require('chai');
+const expect = chai.expect;
+
+const Round = require('../src/Round');
+const Turn = require('../src/Turn');
+const Deck = require('../src/Deck');
+const Card = require('../src/Card');
+const Game = require('../src/Game');
+
+describe('Round', () => {
+  let game, round, turn, deck, card1, card2, card3;
+
+  beforeEach(() => {
+    card1 = new Card(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter');
+    card2 = new Card(14, 'What organ is Khalid missing?', ['spleen', 'appendix', 'gallbladder'], 'gallbladder');
+    card3 = new Card(12, 'What is Travis\'s favorite stress reliever?', ['listening to music', 'watching Netflix', 'playing with bubble wrap'], 'playing with bubble wrap');
+    deck = new Deck([card1, card2, card3]);
+    round = new Round(deck);
+  })
+
+  it('Should be a function', () => {
+    expect(Round).to.be.a('function');
+  })
+
+  it('Should be an instance of Round', () => {
+    expect(round).to.be.an.instanceof(Round);
+  })
+
+  it('should contain a method that returns the current card being played', function() {
+    expect(round.returnCurrentCard()).to.equal(card1);
+  });
+
+  it('should create a new Turn instance when a guess is made', function() {
+    round.takeTurn('sea otter');
+    expect(round.guess).to.be.an.instanceof(Turn);
+
+  });
+
+  it('should contain a takeTurn method that updates turns count', function() {
+    expect(round.turns).to.equal(0)
+    round.takeTurn('sea otter');
+    expect(round.turns).to.equal(1)
+
+  });
+
+  it('next card should become current card after takeTurn', function() {
+    expect(round.returnCurrentCard()).to.equal(card1);
+    round.takeTurn('sea otter');
+    expect(round.returnCurrentCard()).to.equal(card2);
+
+  });
+
+
+  it('should evaluate the guess and store incorrect guesses into the incorrectGuess array', function() {
+    expect(round.takeTurn('sea otter')).to.equal('correct!');
+    expect(round.takeTurn('spleen')).to.equal('incorrect!');
+
+  });
+
+  it('should contain a method that calculates the percent correct', function() {
+    round.takeTurn('sea otter');
+    expect(round.calculatePercentCorrect()).to.equal(100);
+    round.takeTurn('spleen');
+    expect(round.calculatePercentCorrect()).to.equal(50);
+
+  });
+
+  it('should contain a method that prints a Round Over statement', function() {
+    round.takeTurn('sea otter');
+    round.takeTurn('gallbladder');
+    round.takeTurn('playing with bubble wrap');
+    expect(round.endRound()).to.equal('** Round over! ** You answered 100% of the questions correctly!')
+  });
+
+
+
+})

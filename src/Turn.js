@@ -20,7 +20,7 @@ class Turn {
     }
   }
 
-  returnFeedback() {
+  giveFeedback() {
     if(this.guess === this.card.correctAnswer) {
       return 'correct!';
     } else {

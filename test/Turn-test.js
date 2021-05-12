@@ -43,10 +43,10 @@ describe('Turn', function() {
   })
 
   it('Should contain a method that returns either ‘incorrect!’ or ‘correct!', function() {
-    expect(turn.returnFeedback()).to.equal('incorrect!');
+    expect(turn.giveFeedback()).to.equal('incorrect!');
 
     const turn2 = new Turn('sea otter', card);
-    expect(turn2.returnFeedback()).to.equal('correct!');
+    expect(turn2.giveFeedback()).to.equal('correct!');
   });
 
 
