@@ -22,7 +22,7 @@ describe('Deck', function() {
   })
 
   it('Should contain a method that counts the cards in the deck', () => {
-    expect(deck.countDeck()).to.equal(3);
+    expect(deck.countCards()).to.equal(3);
   })
 
 
