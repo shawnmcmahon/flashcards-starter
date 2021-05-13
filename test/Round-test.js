@@ -5,10 +5,9 @@ const Round = require('../src/Round');
 const Turn = require('../src/Turn');
 const Deck = require('../src/Deck');
 const Card = require('../src/Card');
-const Game = require('../src/Game');
 
 describe('Round', () => {
-  let game, round, turn, deck, card1, card2, card3;
+  let round, deck, card1, card2, card3;
 
   beforeEach(() => {
     card1 = new Card(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter');
