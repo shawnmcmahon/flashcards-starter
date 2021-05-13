@@ -19,15 +19,15 @@ describe('Game', function() {
 
   });
 
-  it('should be a function', () => {
+  it('Should be a function', () => {
     expect(Game).to.be.a('function');
   });
 
-  it('should instantiate a round', () => {
+  it('Should instantiate a round', () => {
     expect(game.currentRound).to.be.an.instanceof(Round);
   });
 
-  it('should be an instance of a Game', () => {
+  it('Should be an instance of a Game', () => {
     expect(game).to.be.an.instanceof(Game);
   });
 
