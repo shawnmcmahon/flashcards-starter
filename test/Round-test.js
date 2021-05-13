@@ -51,10 +51,14 @@ describe('Round', () => {
   });
 
 
-  it('should evaluate the guess and store incorrect guesses into the incorrectGuess array', function() {
+  it('should evaluate the guess and not store a correct guess into the incorrectGuess array', function() {
     expect(round.takeTurn('sea otter')).to.equal('correct!');
-    expect(round.takeTurn('spleen')).to.equal('incorrect!');
+    expect(round.incorrectGuesses.length).to.eql(0);
+  });
 
+  it('should evaluate the guess and a store incorrect guess into the incorrectGuess array', function() {
+    expect(round.takeTurn('spleen')).to.equal('incorrect!');
+    expect(round.incorrectGuesses.length).to.eql(1);
   });
 
   it('should contain a method that calculates the percent correct', function() {
