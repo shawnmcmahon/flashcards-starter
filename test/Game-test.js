@@ -8,6 +8,7 @@ const Game = require('../src/Game');
 
 describe('Game', function() {
   let game, round, deck, card1, card2, card3;
+  
   beforeEach(() => {
   card1 = new Card(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter');
   card2 = new Card(14, 'What organ is Khalid missing?', ['spleen', 'appendix', 'gallbladder'], 'gallbladder');
