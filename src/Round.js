@@ -1,5 +1,4 @@
 const Turn = require('../src/Turn');
-const Game = require('../src/Game');
 
 class Round {
   constructor(deck, game) {
@@ -23,7 +22,6 @@ class Round {
     if (!turn.evaluateGuess()) {
       this.incorrectGuesses.push(card.id);
     }
-
     this.returnCurrentCard();
     return turn.giveFeedback();
   }
@@ -36,11 +34,8 @@ class Round {
   endRound() {
     console.log(`** Round over! ** You answered ${this.calculatePercentCorrect()}% of the questions correctly!`);
     //return `** Round over! ** You answered ${this.calculatePercentCorrect()}% of the questions correctly!`;
-
   }
 
-
 }
-
 
 module.exports = Round;

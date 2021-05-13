@@ -36,7 +36,7 @@ describe('Round', () => {
 
   });
 
-  it('Should contain a takeTurn method that updates turns count', function() {
+  it('Should contain a takeTurn method that updates the turn count', function() {
     expect(round.turns).to.equal(0)
     round.takeTurn('sea otter');
     expect(round.turns).to.equal(1);
