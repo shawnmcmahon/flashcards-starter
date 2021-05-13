@@ -27,5 +27,14 @@ describe('Game', () => {
     expect(game).to.be.an.instanceof(Game);
   });
 
+  it('Should have a default current round of undefined', () => {
+    expect(game.currentRound).to.equal(undefined);
+  });
+
+  it('Should have currentRound become an instance of Round when game begins', () => {
+    //game.start();
+    //expect(game.currentRound).to.be.an.instanceOf(Round);
+  });
+
 
 });

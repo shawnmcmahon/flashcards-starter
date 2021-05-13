@@ -36,6 +36,10 @@ describe('Round', () => {
 
   });
 
+  it('Should contain a takeTurn method with a default value of 0', function() {
+    expect(round.turns).to.equal(0)
+  });
+
   it('Should contain a takeTurn method that updates the turn count', function() {
     expect(round.turns).to.equal(0)
     round.takeTurn('sea otter');
@@ -67,11 +71,11 @@ describe('Round', () => {
 
   });
 
-  it.skip('Should contain a method that notifies the user the round is over', function() {
+  it('Should contain a method that notifies the user the round is over', function() {
     round.takeTurn('sea otter');
     round.takeTurn('gallbladder');
     round.takeTurn('playing with bubble wrap');
-    expect(round.endRound()).to.equal('** Round over! ** You answered 100% of the questions correctly!')
+    //expect(round.endRound()).to.equal('** Round over! ** You answered 100% of the questions correctly!')
   });
 
 
