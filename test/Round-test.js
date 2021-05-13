@@ -26,11 +26,11 @@ describe('Round', () => {
     expect(round).to.be.an.instanceof(Round);
   })
 
-  it('Should contain a method that returns the current card being played', function() {
+  it('Should contain a method that returns the current card', function() {
     expect(round.returnCurrentCard()).to.equal(card1);
   });
 
-  it('Should create a new Turn instance when a guess is made', function() {
+  it('Should assign a guess property that is an instance of Turn', function() {
     round.takeTurn('sea otter');
     expect(round.guess).to.be.an.instanceof(Turn);
 
@@ -67,7 +67,7 @@ describe('Round', () => {
 
   });
 
-  it.skip('Should contain a method that prints a Round Over statement', function() {
+  it.skip('Should contain a method that notifies the user the round is over', function() {
     round.takeTurn('sea otter');
     round.takeTurn('gallbladder');
     round.takeTurn('playing with bubble wrap');

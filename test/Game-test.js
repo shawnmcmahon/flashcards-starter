@@ -16,16 +16,11 @@ describe('Game', () => {
     deck = new Deck([card1, card2, card3]);
     round = new Round(deck);
     game = new Game(round);
-    game.start();
 
   })
 
   it('Should be a function', () => {
     expect(Game).to.be.a('function');
-  });
-
-  it('Should instantiate a round', () => {
-    expect(game.currentRound).to.be.an.instanceof(Round);
   });
 
   it('Should be an instance of a Game', () => {
@@ -34,5 +29,3 @@ describe('Game', () => {
 
 
 });
-
-module.exports = Game;
