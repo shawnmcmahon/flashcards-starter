@@ -1,6 +1,6 @@
 const data = require('./data');
 const prototypeQuestions = data.prototypeData;
-const newQuestions = data.newData;
+//const newQuestions = data.newData;
 const util = require('./util');
 const Card = require('../src/Card');
 const Deck = require('../src/Deck');
