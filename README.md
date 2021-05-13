@@ -27,3 +27,4 @@ This is program has no GUI and is run and installed through the user's terminal.
 
 
 ### Program Example
+![flashcard-gif](https://user-images.githubusercontent.com/73731359/118185339-a9af5200-b3f9-11eb-9d3b-f9c52ed35b68.gif)
