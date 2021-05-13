@@ -2,7 +2,7 @@
 
 ### Description
 - Flashcard starter kit is here for all of your flashcard needs. This program will help you study array prototypes to become an array iterator master.
-This is program has no GUI and is run and installed through the user's terminal.  
+This is program has no GUI and is run/installed through the user's terminal.  
 
 
 ### How it Works
