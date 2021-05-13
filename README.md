@@ -12,7 +12,6 @@ This is program has no GUI and is run and installed through the user's terminal.
 - Use the number keys 1, 2, and 3 to answer each question.
 - Your percentage correct will appear at the end of the round.
 
-
 ### Technologies Implemented
 - JavaScript
 - Git & Github
