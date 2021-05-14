@@ -28,8 +28,7 @@ class Round {
   }
 
   calculatePercentCorrect() {
-    const score = (this.turns - this.incorrectGuesses.length) / this.turns * 100;
-    return score;
+    return (this.turns - this.incorrectGuesses.length) / this.turns * 100;
   }
 
   endRound() {
